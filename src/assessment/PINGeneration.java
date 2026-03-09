@@ -2,7 +2,7 @@
  * Program to generate PIN by using the three inputs from the user
  */
 
-package assessemt;
+package assessment;
 
 import java.util.Scanner;
 

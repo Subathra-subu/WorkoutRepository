@@ -2,7 +2,7 @@
  * Program to find which token number got first,second and third prize based on the conditions
  */
 
-package assessemt;
+package assessment;
 
 import java.util.Scanner;
 

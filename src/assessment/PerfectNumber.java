@@ -2,7 +2,7 @@
  * Program to check whether the given number is perfect number or not
  */
 
-package assessemt;
+package assessment;
 
 import java.util.Scanner;
 
