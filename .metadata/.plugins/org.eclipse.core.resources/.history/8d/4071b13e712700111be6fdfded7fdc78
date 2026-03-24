@@ -1,0 +1,69 @@
+package jdbc_crud_procedures;
+
+import java.util.Scanner;
+
+public class EmployeeCrudProcedures {
+
+	public static void main(String[]args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		EmployeeDAO dao = new EmployeeDAO();
+		
+		int choice=-1;
+		
+		do {
+			System.out.println("\nChoose the option:"
+					+ "\n1.Insert an employee"
+					+ "\n2.Display an employee"
+					+ "\n3.Update an employee"
+					+ "\n4.Delete an employee"
+					+ "\n5.Display an employee by id"
+					+ "\n6.Exit");
+			
+			switch(choice) {
+			
+			case 1:
+				System.out.print("\nInsert Employee\n");
+				
+				System.out.print("Enter employee id:");
+				int id = sc.nextInt();
+				sc.nextLine();
+				
+				System.out.print("Enter employee name:");
+				String name = sc.nextLine();
+				
+				System.out.print("Enter employee department:");
+				String dept = sc.nextLine();
+				
+				dao.insertEmployee(new Employee (id,name,dept));
+				
+				break;
+				
+			case 2:
+				
+				break;
+				
+			case 3:
+				
+				break;
+				
+			case 4:
+				
+				break;
+				
+			case 5:
+				
+				break;
+				
+			case 6:
+				
+				break;
+				
+			default:
+				System.out.print("Invalid choice");
+			
+			}
+		}while(choice!=6);
+	}
+}

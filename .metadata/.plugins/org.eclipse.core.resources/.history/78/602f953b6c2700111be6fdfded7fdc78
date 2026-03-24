@@ -1,0 +1,14 @@
+package jdbc_crud_procedures;
+
+import java.sql.*;
+
+public class EmployeeDAO {
+	
+	public void insertEmployee(Employee emp) {
+		try(Connection con = DBConnection.getConnection());
+				CallableStatement cs = con.prepareCall("{call insert_employee(?,?,?,)}");
+		
+		
+	}
+
+}

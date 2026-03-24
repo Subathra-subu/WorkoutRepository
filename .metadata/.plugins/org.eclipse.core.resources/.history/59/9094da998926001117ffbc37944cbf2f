@@ -1,0 +1,30 @@
+package com.Expleo.DemoProject;
+
+import java.sql.*;
+
+public class TableCreation {
+
+	public static void main(String[] args) throws SQLException {
+		
+		String dbUrl = "jdbc:mysql://localhost:3306/testdb";
+		
+		String userName = "root";
+		
+		String password = "Subu@2004";
+		
+		try(Connection con = DriverManager.getConnection(dbUrl,userName,password)){
+			
+			String sql = "CREATE TABLE Student"
+					+ "(Id INT NOT NULL,"
+					+ "Name VARCHAR(225)"
+					+ "Course VARCHAR(225)"
+					+ "Email VARCHAR(255)"
+					+ "PRIMARY KEY (Id))";
+			
+			
+		}
+				
+
+	}
+
+}

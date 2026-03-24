@@ -1,0 +1,106 @@
+package jdbc_crud_procedures;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class EmployeeCrudProcedures {
+
+	public static void main(String[]args) throws SQLException {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		EmployeeDAO dao = new EmployeeDAO();
+		
+		int choice=-1;
+		
+		do {
+			System.out.println("\nChoose the option:"
+					+ "\n1.Insert an employee"
+					+ "\n2.Display an employee"
+					+ "\n3.Update an employee"
+					+ "\n4.Delete an employee"
+					+ "\n5.Display an employee by id"
+					+ "\n6.Exit");
+			
+			System.out.println("Enter the choice:");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1:
+				System.out.print("\nInsert Employee\n");
+				
+				System.out.print("Enter employee id:");
+				int id = sc.nextInt();
+				sc.nextLine();
+				
+				System.out.print("Enter employee name:");
+				String name = sc.nextLine();
+				
+				System.out.print("Enter employee department:");
+				String dept = sc.nextLine();
+				
+				dao.insertEmployee(new Employee(id,name,dept));
+				
+				break;
+				
+			case 2:
+				
+				System.out.print("\nEmployee details\n");
+				
+				dao.displayEmployee();
+				
+				break;
+				
+			case 3:
+				
+				System.out.print("\nUpdate Employee\n");
+				
+				System.out.print("Enter employee id:");
+				id = sc.nextInt();
+				
+				System.out.print("Enter employee department:");
+				dept = sc.nextLine();
+				
+				dao.updateEmployee(id, dept);
+				
+				break;
+				
+			case 4:
+				
+				System.out.print("\nDelete Employee\n");
+				
+				System.out.print("Enter employee id:");
+				id = sc.nextInt();
+				
+				dao.deleteEmployee(id);
+				
+				break;
+				
+			case 5:
+				
+				System.out.print("\nDisplay Employee by Id\n");
+				
+				System.out.print("Enter employee id:");
+				id = sc.nextInt();
+				
+				dao.displayEmployeeById(id);
+				
+				break;
+				
+			case 6:
+				
+				System.out.print("Thank you!!!");
+				
+				break;
+				
+			default:
+				System.out.print("Invalid choice");
+			
+			}
+			
+		}while(choice!=6);
+		
+		sc.close();
+	}
+}
