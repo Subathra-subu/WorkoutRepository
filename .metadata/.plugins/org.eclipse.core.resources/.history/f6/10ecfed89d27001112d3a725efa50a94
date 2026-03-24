@@ -1,0 +1,19 @@
+package com.Expleo.DemoProject;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class StudentDB {
+	
+	public void createTable(String name) {
+		
+	}
+	
+	public void insertStudent(Student s) {
+		
+	}
+	
+	
+	
+
+}

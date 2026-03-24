@@ -1,0 +1,16 @@
+package com.Expleo.DemoProject;
+
+import java.sql.DriverManager;
+
+public class JDBCConnection {
+	
+	String dbUrl = "jdbc:mysql://localhost:3306/testdb";
+	
+	String userName = "root";
+	
+	String password = "Subu@2004";
+	
+	return DriverManager.getConnection(dbUrl,userName,password);
+ }
+
+}

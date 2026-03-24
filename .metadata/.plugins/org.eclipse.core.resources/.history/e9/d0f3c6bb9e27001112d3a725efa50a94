@@ -1,0 +1,76 @@
+package com.Expleo.DemoProject;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
+public class StudentDB{
+	
+	public void createTable(String name) {
+		
+		try(Connection con = JDBCConnection.getConnection()){
+			
+			String sql = "CREATE TABLE Student"
+					+ "(Id INT NOT NULL,"
+					+ "Name VARCHAR(225),"
+					+ "Course VARCHAR(225),"
+					+ "Email VARCHAR(255),"
+					+ "PRIMARY KEY (Id))";
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			
+			ps.executeUpdate();
+			
+			System.out.print("Table created successfully.");
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void insertStudent(Student s) {
+		
+		try(Connection con = JDBCConnection.getConnection()){
+			
+			String sql ="INSERT INTO Student (Id,Name,Course,Email) VALUES (?,?,?,?)";
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			
+			ps.setInt(1, s.getId());
+			ps.setString(2,s.getName());
+			ps.setString(3, s.getCourse());
+			ps.setString(4, s.getEmail());
+			
+			int rowsInserted = ps.executeUpdate();
+			
+			if(rowsInserted > 0) {
+				System.out.println("A new user was inserted successfully");
+			}
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+
+	}
+		
+		
+	}
+	
+	public void displayStudents() {
+		
+	}
+	
+	public void updateStudent(int id, String course, String email) {
+		
+	}
+	
+	public void deleteStudent(int id) {
+		
+	}
+	
+
+}

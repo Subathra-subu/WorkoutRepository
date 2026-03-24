@@ -1,0 +1,54 @@
+package com.Expleo.DemoProject;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class StudentDB throws SQLException {
+	
+	static Connection con = JDBCConnection.getConnection();
+	
+	public void createTable(String name) {
+		
+		try{
+			
+			String sql = "CREATE TABLE Student"
+					+ "(Id INT NOT NULL,"
+					+ "Name VARCHAR(225),"
+					+ "Course VARCHAR(225),"
+					+ "Email VARCHAR(255),"
+					+ "PRIMARY KEY (Id))";
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			
+			ps.executeUpdate();
+			
+			System.out.print("Table created successfully.");
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void insertStudent(Student s) {
+		
+	}
+	
+	public void displayStudents() {
+		
+	}
+	
+	public void updateStudent(int id, String course, String email) {
+		
+	}
+	
+	public void deleteStudent(int id) {
+		
+	}
+	
+
+}
