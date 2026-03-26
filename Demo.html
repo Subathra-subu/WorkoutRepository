@@ -1,0 +1,205 @@
+<html>
+    <h1> BookShelf </h1>
+
+    <p> Your Personal Book Collection Manager</p>
+
+    <ul>
+        <li> <a href ="https://www.example.com">My Collection</a> </li>
+        <li> <a href = "https://www.example.com">Add a book</a> </li>   
+        <li> <a href = "https://www.example.com">Reading Status</a> </li>    
+        <li> <a href = "https://www.example.com">About</a> </li>    
+    </ul>
+
+    <h2>My Book Collection</h2>
+
+    <p>Currently tracking across <mark>2</mark> genres.</p>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.irustima.com/wp-content/uploads/2025/01/atomic-habits-james-clear-irustima.jpg"  width="200" height="200">
+
+    <div style="margin-left: 20px;">An eassy way to build good habits</div>
+    <br>
+
+    <p>Author</p>
+    <div style="margin-left: 20px;">James Clear</div>
+
+    <p>Genre</p>
+    <div style="margin-left: 20px;">Self Help</div>
+
+    <p>Date Added</p>
+    <div style="margin-left: 20px;">November 20,2024</div>
+
+    <p>Rating</p>
+    <div style="margin-left: 20px;">&#9733;&#9733;&#9733;&#9733;&#9734;(4/5)</div>
+
+    <p>Status</p>
+    <div style="margin-left: 20px;">Finished</div>
+
+    <p>Tiny changes,remarkable results</p>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://m.media-amazon.com/images/I/61ztlXgCmpL._AC_UF1000,1000_QL80_.jpg"  width="200" height="200">
+
+    <div style="margin-left: 20px;">20th Anniversary Edition</div>
+    <br>
+
+    <p>Author</p>
+    <div style="margin-left: 20px;">David Thomas & Andrew Hunt</div>
+
+    <p>Genre</p>
+    <div style="margin-left: 20px;">Technology</div>
+
+    <p>Date Added</p>
+    <div style="margin-left: 20px;">January 15,2025</div>
+
+    <p>Rating</p>
+    <div style="margin-left: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;(5/5)</div>
+
+    <p>Status</p>
+    <div style="margin-left: 20px;">Currently reading</div>
+
+    <p>A classic guide to software craftsmanship</p>
+
+    <h2>Add a Book</h2>
+
+    <p>
+        Fill in the details below to add a book to your collection
+    </p>
+
+    <form>
+        <fieldset>
+        <legend>Book Information</legend>
+        <label>Book Title <input type = text placeholder="e.g,Courage to be disliked"></label><br>
+        <label>Author <input type = text placeholder="e.g,Fumitake Koga and Ichiro Kishimi"></label><br>
+        <label>ISBN(13 digits) <input type = number placeholder="e.g,1234567891011"></label><br>
+        <label>Genre<select>
+             <option value="" disabled selected hidden>--Select Genre--</option>
+            <option>Thriller</option>
+            <option>Comedy</option>
+            <option>Horror</option>
+        </select></label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Reading Details</legend>
+            <label>Date Added <input type = date placeholder="dd-mm-yyyy"U+1F4C5></label><br>
+            <label>Your Rating(1-5)<input type = range min="1" max="5" value="3" step="1"></label>
+            <fieldset>
+                <input type="radio" checked><label>Want to read</label>
+                <input type="radio" ><label>Currently reading</label>
+                <input type="radio" ><label>Finished</label>
+                <input type="radio" ><label>Abandoned</label>
+            </fieldset>
+            <input type = "checkbox"><label>Mark as favorite</label><br>
+            <label>Personal notes</label><textarea  rows="4" cols="50">Your thoughts about this book</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Recommend to your friend (Optional)</legend>
+            <lable>Friend's name<input type = text placeholder="e.g, Jane smith"></lable><br>
+            <lable>Friend's email<input type = email placeholder="e.g, jane@gmail.com"></lable><br>
+            <lable>Friend's number<input type = tel placeholder="e.g, +91 9876543210"></lable><br>
+        </fieldset>
+    </form>
+
+    <h2>Reading Statistics</h2>
+    <p>Books read per genre in 2024–2025</p>
+
+    <table >
+        <tr>
+            <th>Genre</th>
+            <th>Books Read</th>
+            <th>Total Pages</th>
+            <th>Avg. Rating</th>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>4</td>
+            <td>1,450</td>
+            <td>&#9733;&#9733;&#9733;&#9733;&#9734; 4.2</td>
+        </tr>
+        <tr>
+            <td>Science Fiction</td>
+            <td>3</td>
+            <td>1,820</td>
+            <td>&#9733;&#9733;&#9733;&#9733;&#9734; 4.8</td>
+        </tr>
+        <tr>
+            <td>Self-Help</td>
+            <td>2</td>
+            <td>580</td>
+            <td>&#9733;&#9733;&#9733;&#9734;&#9734; 3.5</td>
+        </tr>
+        <tr>
+            <td>Fiction</td>
+            <td>5</td>
+            <td>1,950</td>
+            <td>&#9733;&#9733;&#9733;&#9733;&#9734;  4.1</td>
+        </tr>
+        <tr>
+            <td>Biography</td>
+            <td>1</td>
+            <td>380</td>
+            <td>&#9733;&#9733;&#9733;&#9734;&#9734;  3.0</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>15</strong></td>
+            <td><strong>6,180</strong></td>
+            <td><strong>4.0 avg</strong></td>
+        </tr>
+    </table>
+
+    <h2>About BookShelf</h2>
+    <p>
+        BookShelf helps you organize, track, and reflect on your reading journey.
+        Whether you're a casual reader or a bookworm, keeping a record of what you've read
+        helps you discover patterns and remember insights.
+    </p>
+
+    <h3>Quick Reading Tips</h3>
+    <ul>
+        <li>Set a daily reading goal (even 15 minutes counts!)</li>
+        <li>Keep a reading journal alongside your books</li>
+        <li>Join a book club for accountability</li>
+        <li>Mix genres to avoid reader burnout</li>
+    </ul>
+
+     <details>
+        <summary>Features Coming Soon</summary>
+        <ul>
+            <li>Reading progress tracker with page numbers</li>
+            <li>Book recommendation engine</li>
+            <li>Social sharing and friend libraries</li>
+            <li>Annual reading challenge goals</li>
+            <li>Dark mode support</li>
+        </ul>
+    </details>
+
+     <details>
+        <summary>Keyboard Shortcuts</summary>
+        <table>
+            <tr>
+                <th>Shortcut keys</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>ctrl+c</td>
+                <td>Copy</td>
+            </tr>
+            <tr>
+                <td>ctrl+v</td>
+                <td>Paste</td>
+            </tr>
+        </table>
+    </details>
+
+    <p> &#9400; 2025 BookShelf — HTML-CSS-JS Bootcamp Demo</p>
+    <p>Created by <a href="#">Bootcamp Student</a></p>
+
+    <ul>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Add Book</a></li>
+            <li><a href="#">Stats</a></li>
+            <li><a href="#">About</a></li>
+    </ul>
+
+</html>
